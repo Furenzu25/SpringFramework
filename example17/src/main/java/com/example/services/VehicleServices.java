@@ -1,5 +1,6 @@
 package com.example.services;
 
+import com.example.interfaces.LogAspect;
 import com.example.interfaces.Speakers;
 import com.example.interfaces.Tyres;
 import com.example.model.Song;
@@ -22,10 +23,7 @@ public class VehicleServices {
     private Speakers speakers;
     private Tyres tyres;
 
-    public VehicleServices(){
-        System.out.println("vehicleServices object is create");
-    }
-
+    @LogAspect
     public String playMusic(boolean vehicleStarted, Song song){
 /*        Instant start = Instant.now();
         logger.info("method execution start");*/
